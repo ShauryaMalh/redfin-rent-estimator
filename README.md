@@ -86,8 +86,10 @@ A Chrome Extension for real estate investors and analysts that integrates **prop
 2. Install dependencies:
    ```bash
    pip install flask scikit-learn pandas joblib
-Train model (optional, already included):
+### 🔧 Training & Running Backend
 
+**Train model (optional, already included):**
+```bash
 python train_model.py
 
 
