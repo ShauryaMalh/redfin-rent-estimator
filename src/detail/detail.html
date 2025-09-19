@@ -1,0 +1,54 @@
+<!--Details.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Listing Details</title>
+  <link rel="stylesheet" href="detail.css">
+  <script type="module" src="detail.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <button id="backBtn" class="back-button">← Back to Listings</button>
+      <h1 id="listingTitle">Listing Details</h1>
+    </header>
+
+    <!-- Summary Section -->
+    <section id="summary" class="card">
+      <img id="listingImage" src="" alt="Property Image" class="listing-image"/>
+      <div class="summary-info">
+        <p><strong>Address:</strong> <span id="address"></span></p>
+        <p><strong>Status:</strong> <span id="status"></span></p>
+        <p><strong>Price:</strong> <span id="price"></span></p>
+        <p><strong>Beds/Baths:</strong> <span id="beds"></span> / <span id="baths"></span></p>
+        <p><strong>SqFt:</strong> <span id="sqft"></span></p>
+      </div>
+    </section>
+
+    <!-- Additional Details -->
+    <section id="details" class="card">
+      <h2>Additional Details</h2>
+      <ul>
+        <li><strong>Lot Size:</strong> <span id="lotSize"></span></li>
+        <li><strong>Year Built:</strong> <span id="yearBuilt"></span></li>
+        <li><strong>Property Type:</strong> <span id="propertyType"></span></li>
+        <li><strong>Parking:</strong> <span id="parking"></span></li>
+        <li><strong>HOA:</strong> <span id="hoa"></span></li>
+        <li><strong>Property Tax:</strong> <span id="propertyTax"></span></li>
+        <li><strong>Insurance:</strong> <span id="insurance"></span></li>
+      </ul>
+    </section>
+
+    <!-- AI Analysis -->
+    <section id="ai-analysis" class="card">
+      <h2>AI Investment Analysis</h2>
+      <p><strong>Estimated Monthly Rent :</strong> <span id="aiScore"></span></p>
+      <p id="aiSummary">Click below to generate analysis.</p>
+      <button id="analyzeBtn">Run Analysis</button>
+    </section>
+  </div>
+
+
+</body>
+</html>

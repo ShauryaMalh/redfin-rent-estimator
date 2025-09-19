@@ -1,0 +1,54 @@
+{
+    "name": "My Redfin Listings",
+    "version": "0.1.0",
+    "description": "Save Redfin listings, track price changes, and get investment insights",
+    "manifest_version": 3,
+
+    "permissions": [
+        "storage",
+        "tabs",
+        "notifications",
+        "alarms",
+        "nativeMessaging",
+        "scripting"
+    ],
+
+    "host_permissions": [
+        "https://*.redfin.com/*"
+
+    ],
+
+    "background": {
+        "service_worker": "src/background.js"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.redfin.com/*/home/*"],
+            "js": ["src/contentScript.js"]
+        }
+    ],
+
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/bookmark.png",
+                "assets/delete.jpeg",
+                "assets/save.jpeg",
+                "assets/viewMore.png",
+                "assets/exit-icon.jpeg"
+            ],
+            "matches": ["https://*.redfin.com/*"]
+        }
+    ],
+
+    "action": {
+        "default_icon": {
+            "16": "assets/notes.png",
+            "24": "assets/notes.png",
+            "32": "assets/notes.png"
+        },
+        "default_title": "My Redfin Listings",
+        "default_popup": "src/popup/popup.html"
+    }
+}

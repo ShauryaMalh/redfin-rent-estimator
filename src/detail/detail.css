@@ -1,0 +1,160 @@
+/* Global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f9fafb, #edf2f7);
+  color: #2d3748;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.listing-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px; /* base size */
+  display: inline-block; /* required for transform */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.listing-link:hover {
+  transform: scale(1.025);   /* scales the link smoothly */
+  color: #011828;          /* optional: color shift */
+}
+
+.back-button {
+  padding: 6px 12px;
+  border: none;
+  background: #e2e8f0;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.back-button:hover {
+  background: #cbd5e0;
+  transform: translateY(-1px);
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #1a202c;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  margin-top: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Summary section */
+#summary {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+#listingImage {
+  width: 240px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.summary-info p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.summary-info strong {
+  color: #2c5282;
+}
+
+/* Price highlight */
+#price {
+  font-weight: 700;
+  font-size: 16px;
+  color: #2b6cb0;
+}
+
+/* Section headers */
+h2 {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+  border-left: 4px solid #3182ce;
+  padding-left: 8px;
+}
+
+/* Details list */
+#details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#details li {
+  padding: 6px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+#details li:last-child {
+  border-bottom: none;
+}
+
+/* AI Analysis */
+#ai-analysis p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+#aiScore {
+  font-weight: bold;
+  font-size: 15px;
+  color: #2f855a;
+}
+
+/* AI button */
+#analyzeBtn {
+  padding: 8px 14px;
+  background: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-size: 14px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#analyzeBtn:hover {
+  background: #2b6cb0;
+  transform: translateY(-1px);
+}
