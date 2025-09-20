@@ -50,6 +50,7 @@ A Chrome Extension for real estate investors and analysts that integrates **prop
 
 ## 📂 Project Structure
 
+```bash
 /real-estate-extension-project
 │
 ├── assets
@@ -75,7 +76,7 @@ A Chrome Extension for real estate investors and analysts that integrates **prop
 │   └─ scaler.json
 │
 └── manifest.json
-
+```
 
 ---
 
