@@ -99,14 +99,14 @@ Runs on http://127.0.0.1:5000
 1. Go to chrome://extensions/
 2. Enable Developer Mode
 3. Click Load unpacked → Select extension/ folder
-    -Extension will now appear in your Chrome toolbar
+    -The extension will now appear in your Chrome toolbar.
 
 
 ### 🔑 Usage
 -Browse Redfin listings → click Save Listing in popup.
 -Listings are grouped by status (For Sale, Pending, etc.).
 -Open Details Page to:
-    -View ML rent predictions
+    -View machine learning–based rent predictions
     -Compare with RentCast API estimate
     -See ROI breakdown (cash flow, % returns)
     -Get Chrome notifications for changes.
@@ -115,9 +115,16 @@ Runs on http://127.0.0.1:5000
 ### 📊 Machine Learning Model
 
 -Algorithm: RandomForestRegressor
--Input Features:
-    -Beds, Baths, Sqft, Zipcode, Property Type, Year Built
--Target: Rent (monthly)
+**Input Features:**
+- `Beds`
+- `Baths`
+- `Sqft`
+- `Zipcode`
+- `Property Type`
+- `Year Built`
+**Target Variable:**  
+- `Monthly Rent`
+
 
 -Preprocessing:
     -Label encoding for categorical features
@@ -138,7 +145,9 @@ Runs on http://127.0.0.1:5000
 -Improve scraping resilience against Redfin DOM changes
 -Add visualization charts in popup (ROI over time, rent vs cost)
 
- 
+🔑 **API Key Note**  
+Store your RentCast API key securely using `chrome.storage.sync`. In a future update, an Options Page will allow users to input and manage their key.
+
 ---
 
 ## 📜 License:
