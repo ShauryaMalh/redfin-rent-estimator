@@ -93,16 +93,16 @@ A Chrome Extension for real estate investors and analysts that integrates **prop
 python train_model.py
 python app.py
 Runs on http://127.0.0.1:5000
+```
 
-2️⃣ Chrome Extension
+### 2️⃣ Chrome Extension
 1. Go to chrome://extensions/
 2. Enable Developer Mode
 3. Click Load unpacked → Select extension/ folder
     -Extension will now appear in your Chrome toolbar
 
----
 
-🔑 Usage
+### 🔑 Usage
 -Browse Redfin listings → click Save Listing in popup.
 -Listings are grouped by status (For Sale, Pending, etc.).
 -Open Details Page to:
@@ -112,9 +112,7 @@ Runs on http://127.0.0.1:5000
     -Get Chrome notifications for changes.
 
 
----
-
-📊 Machine Learning Model
+### 📊 Machine Learning Model
 
 -Algorithm: RandomForestRegressor
 -Input Features:
@@ -132,7 +130,7 @@ Runs on http://127.0.0.1:5000
 
 ---
 
-🚀 Future Improvements:
+## 🚀 Future Improvements:
 
 -Add more robust ML model (XGBoost / CatBoost)
 -Implement an Options Page for user API key entry
@@ -141,10 +139,13 @@ Runs on http://127.0.0.1:5000
 -Add visualization charts in popup (ROI over time, rent vs cost)
 
  
+---
 
-📜 License:
+## 📜 License:
 -MIT License – free to use, modify, and distribute.
 
-👨‍💻 Author:
+---
+
+## 👨‍💻 Author:
 -Developed by Shaurya Malhotra
 -Features: real estate investment analysis, ML integration, and Chrome automation.
