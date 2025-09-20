@@ -127,13 +127,13 @@ Runs on http://127.0.0.1:5000
 - `Monthly Rent`
 
 
--Preprocessing:
-    -Label encoding for categorical features
-    -Missing value imputation with -1
+**Preprocessing:**
+- Label encoding for categorical features
+- Missing value imputation with `-1`
 
--Performance:
--Mean CV MAE: $347.79
--Mean CV R²: 0.70
+**Model Performance:**
+- **Mean CV MAE**: `$347.79`
+- **Mean CV R²**: `0.70`
 
 
 ---
