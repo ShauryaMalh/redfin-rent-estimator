@@ -103,15 +103,15 @@ Runs on http://127.0.0.1:5000
 1. Go to chrome://extensions/
 2. Enable Developer Mode
 3. Click Load unpacked → Select extension/ folder
-    -The extension will now appear in your Chrome toolbar.
+    - The extension will now appear in your Chrome toolbar.
 
 
 ### 🔑 Usage
 1. Browse Redfin listings → click Save Listing in popup.
 2. Listings are grouped by status (For Sale, Pending, etc.)
 3. Open Details Page to:
-    -View breakdown of scraped details.
-    -Call an investement analysis to predict the monthly rent
+    - View breakdown of scraped details.
+    - Call an investement analysis to predict the monthly rent
 
 
 
