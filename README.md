@@ -25,7 +25,7 @@ A Chrome Extension for real estate investors and analysts that integrates **prop
     - Mean CV R²: **0.70**
 
 - **Investment Analysis Tools**  
-  - Calculates ROI, cost-to-rent ratios, and estimated cash flow
+  - Calculates estimated cash flow
   - Breaks down housing costs (HOA, insurance, taxes, mortgage)
 
 - **Chrome Integrations**  
@@ -34,7 +34,7 @@ A Chrome Extension for real estate investors and analysts that integrates **prop
   - **CSV Export** of saved listings
 
 - **Third-Party Integration**  
-  - RentCast API integration for market rent estimates
+  - RentCast API integration for market rent estimates (used to train ML model)
 
 ---
 
@@ -74,8 +74,11 @@ A Chrome Extension for real estate investors and analysts that integrates **prop
 ├── data
 │   ├─ model.json
 │   └─ scaler.json
-│
-└── manifest.json
+│── manifest.json
+│── README.md
+└── LICENSE
+
+
 ```
 
 ---
@@ -83,7 +86,7 @@ A Chrome Extension for real estate investors and analysts that integrates **prop
 ## ⚡ Installation & Setup
 
 ### 1️⃣ Backend (Flask API)
-1. Clone the repo and navigate to `backend/`.
+1. Clone the repo
 2. Install dependencies:
    ```bash
    pip install flask scikit-learn pandas joblib
@@ -104,32 +107,35 @@ Runs on http://127.0.0.1:5000
 
 
 ### 🔑 Usage
--Browse Redfin listings → click Save Listing in popup.
--Listings are grouped by status (For Sale, Pending, etc.).
--Open Details Page to:
+1. Browse Redfin listings → click Save Listing in popup.
+2. Listings are grouped by status (For Sale, Pending, etc.).
+3. Open Details Page to:
+    -View breakdown of scraped details from listing
     -View machine learning–based rent predictions
-    -Compare with RentCast API estimate
-    -See ROI breakdown (cash flow, % returns)
-    -Get Chrome notifications for changes.
 
 
 ### 📊 Machine Learning Model
 
 -Algorithm: RandomForestRegressor
 **Input Features:**
-- `Beds`
-- `Baths`
+- `Price`
+- `Principal Interest`
+- `Property Tax`
+- `HOA`
 - `Sqft`
-- `Zipcode`
+- `Price Per Sqft`
+- `Home Owners Insurance`
+- `Baths`
+- `Beds`
 - `Property Type`
-- `Year Built`
+- `Listing Status`
 
 **Target Variable:**  
 - `Monthly Rent`
 
 
 **Preprocessing:**
-- Label encoding for categorical features
+- Label encoding for categorical features (Listing Status & Property Type)
 - Missing value imputation with `-1`
 
 **Model Performance:**
@@ -143,12 +149,11 @@ Runs on http://127.0.0.1:5000
 
 -Add more robust ML model (XGBoost / CatBoost)
 -Implement an Options Page for user API key entry
--Use offscreen documents instead of opening full tabs for scraping
 -Improve scraping resilience against Redfin DOM changes
 -Add visualization charts in popup (ROI over time, rent vs cost)
 
-🔑 **API Key Note**  
-Store your RentCast API key securely using `chrome.storage.sync`. In a future update, an Options Page will allow users to input and manage their key.
+🔑 **API Improvement**  
+Store the RentCast API key securely using `chrome.storage.sync`. In a future update, an Options Page will allow users to input and manage their key.
 
 ---
 
