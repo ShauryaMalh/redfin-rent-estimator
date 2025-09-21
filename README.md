@@ -108,10 +108,11 @@ Runs on http://127.0.0.1:5000
 
 ### 🔑 Usage
 1. Browse Redfin listings → click Save Listing in popup.
-2. Listings are grouped by status (For Sale, Pending, etc.).
+2. Listings are grouped by status (For Sale, Pending, etc.)
 3. Open Details Page to:
-    -View breakdown of scraped details from listing
-    -View machine learning–based rent predictions
+    -View breakdown of scraped details.
+    -Call an investement analysis to predict the monthly rent
+
 
 
 ### 📊 Machine Learning Model
