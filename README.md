@@ -148,10 +148,10 @@ Runs on http://127.0.0.1:5000
 
 ## 🚀 Future Improvements:
 
--Add more robust ML model (XGBoost / CatBoost)
--Implement an Options Page for user API key entry
--Improve scraping resilience against Redfin DOM changes
--Add visualization charts in popup (ROI over time, rent vs cost)
+- Add more robust ML model (XGBoost / CatBoost)
+- Implement an Options Page for user API key entry
+- Improve scraping resilience against Redfin DOM changes
+- Add visualization charts in popup (ROI over time, rent vs cost)
 
 🔑 **API Improvement**  
 Store the RentCast API key securely using `chrome.storage.sync`. In a future update, an Options Page will allow users to input and manage their key.
@@ -164,5 +164,5 @@ Store the RentCast API key securely using `chrome.storage.sync`. In a future upd
 ---
 
 ## 👨‍💻 Author:
--Developed by Shaurya Malhotra
--Features: real estate investment analysis, ML integration, and Chrome automation.
+- Developed by Shaurya Malhotra
+- Features: real estate investment analysis, ML integration, and Chrome automation.
